@@ -1,0 +1,447 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	Statement/Const/A.java	/^	public A(TokenScanner scanner) throws ResolveError {$/;"	m	class:A
+A	Statement/Const/A.java	/^public class A extends BaseConst {$/;"	c
+AssignStmt	Statement/AssignStmt.java	/^	public AssignStmt(TokenScanner scanner) throws ResolveError {$/;"	m	class:AssignStmt
+AssignStmt	Statement/AssignStmt.java	/^public class AssignStmt extends BaseStmt {$/;"	c
+AssignTree	Node/AssignTree.java	/^    public AssignTree(){}$/;"	m	class:AssignTree
+AssignTree	Node/AssignTree.java	/^public class AssignTree implements Tree{$/;"	c
+B	Statement/Const/B.java	/^	public B(TokenScanner scanner) throws ResolveError {$/;"	m	class:B
+B	Statement/Const/B.java	/^public class B extends BaseConst {$/;"	c
+BaseConst	Statement/Const/BaseConst.java	/^public class BaseConst {$/;"	c
+BaseStmt	Statement/BaseStmt.java	/^public class BaseStmt {$/;"	c
+BattleEntry	BattleEntry.java	/^public class BattleEntry {$/;"	c
+CUR	Statement/Const/CUR.java	/^	public CUR(TokenScanner scanner) throws ResolveError {$/;"	m	class:CUR
+CUR	Statement/Const/CUR.java	/^public class CUR extends BaseConst {$/;"	c
+Cmd	Cmd.java	/^    public Cmd(String cmd){$/;"	m	class:Cmd
+Cmd	Cmd.java	/^public class Cmd {$/;"	c
+CmdError	Error/CmdError.java	/^    public CmdError(String message){$/;"	m	class:CmdError
+CmdError	Error/CmdError.java	/^public class CmdError extends Exception {$/;"	c
+ComplexExp	Statement/ComplexExp.java	/^	public ComplexExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:ComplexExp
+ComplexExp	Statement/ComplexExp.java	/^public class ComplexExp extends BaseStmt {$/;"	c
+ConstExp	Statement/ConstExp.java	/^	public ConstExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:ConstExp
+ConstExp	Statement/ConstExp.java	/^public class ConstExp extends BaseStmt {$/;"	c
+ConstTree	Node/ConstTree.java	/^    public ConstTree(){}$/;"	m	class:ConstTree
+ConstTree	Node/ConstTree.java	/^public class ConstTree implements Tree{$/;"	c
+CurrentTree	Node/CurrentTree.java	/^    public CurrentTree(){}$/;"	m	class:CurrentTree
+CurrentTree	Node/CurrentTree.java	/^public class CurrentTree implements Tree{$/;"	c
+EOF_FLAG	Resolve/TokenScanner.java	/^	private boolean			EOF_FLAG;$/;"	f	class:TokenScanner	file:
+EOF_FLAG	Token/TokenScanner.java	/^	private boolean			EOF_FLAG;$/;"	f	class:TokenScanner	file:
+Error	Error/CmdError.java	/^package Error;$/;"	p
+Error	Error/ResolveError.java	/^package Error;$/;"	p
+Error	Error/RunningError.java	/^package Error;$/;"	p
+ExpTree	Node/ExpTree.java	/^    public ExpTree(){}$/;"	m	class:ExpTree
+ExpTree	Node/ExpTree.java	/^public class ExpTree implements Tree{$/;"	c
+FILE_EOF	Resolve/TokenScanner.java	/^	private static final int FILE_EOF			= -1;$/;"	f	class:TokenScanner	file:
+FILE_EOF	Token/TokenScanner.java	/^	private static final int FILE_EOF			= -1;$/;"	f	class:TokenScanner	file:
+FIRST_RUN	Runtime/Program.java	/^    public static final int FIRST_RUN = 1;$/;"	f	class:Program
+FLAG_DONE	Resolve/TokenScanner.java	/^	private static final int FLAG_DONE			= 100;$/;"	f	class:TokenScanner	file:
+FLAG_DONE	Token/TokenScanner.java	/^	private static final int FLAG_DONE			= 100;$/;"	f	class:TokenScanner	file:
+FLAG_ERROR	Resolve/TokenScanner.java	/^	private static final int FLAG_ERROR			= 101;$/;"	f	class:TokenScanner	file:
+FLAG_ERROR	Token/TokenScanner.java	/^	private static final int FLAG_ERROR			= 101;$/;"	f	class:TokenScanner	file:
+FLAG_INASSIGN	Resolve/TokenScanner.java	/^	private static final int FLAG_INASSIGN		= 4;$/;"	f	class:TokenScanner	file:
+FLAG_INASSIGN	Token/TokenScanner.java	/^	private static final int FLAG_INASSIGN		= 4;$/;"	f	class:TokenScanner	file:
+FLAG_INCOMMENT	Resolve/TokenScanner.java	/^	private static final int FLAG_INCOMMENT		= 1;$/;"	f	class:TokenScanner	file:
+FLAG_INCOMMENT	Token/TokenScanner.java	/^	private static final int FLAG_INCOMMENT		= 1;$/;"	f	class:TokenScanner	file:
+FLAG_INID	Resolve/TokenScanner.java	/^	private static final int FLAG_INID			= 3;$/;"	f	class:TokenScanner	file:
+FLAG_INID	Token/TokenScanner.java	/^	private static final int FLAG_INID			= 3;$/;"	f	class:TokenScanner	file:
+FLAG_INNUM	Resolve/TokenScanner.java	/^	private static final int FLAG_INNUM			= 2;$/;"	f	class:TokenScanner	file:
+FLAG_INNUM	Token/TokenScanner.java	/^	private static final int FLAG_INNUM			= 2;$/;"	f	class:TokenScanner	file:
+FLAG_START	Resolve/TokenScanner.java	/^	private static final int FLAG_START			= 0;$/;"	f	class:TokenScanner	file:
+FLAG_START	Token/TokenScanner.java	/^	private static final int FLAG_START			= 0;$/;"	f	class:TokenScanner	file:
+FactorExp	Statement/FactorExp.java	/^	public FactorExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:FactorExp
+FactorExp	Statement/FactorExp.java	/^public class FactorExp extends BaseStmt {$/;"	c
+FactorTree	Node/FactorTree.java	/^    public FactorTree(){}$/;"	m	class:FactorTree
+FactorTree	Node/FactorTree.java	/^public class FactorTree implements Tree{$/;"	c
+GlobalValue	Runtime/GlobalValue.java	/^public class GlobalValue {$/;"	c
+INASSIGN	Resolve/TokenScanner.java	/^	private int INASSIGN(int code) {$/;"	m	class:TokenScanner	file:
+INASSIGN	Token/TokenScanner.java	/^	private int INASSIGN(int code) {$/;"	m	class:TokenScanner	file:
+INCOMMENT	Resolve/TokenScanner.java	/^	private int INCOMMENT(int code) {$/;"	m	class:TokenScanner	file:
+INCOMMENT	Token/TokenScanner.java	/^	private int INCOMMENT(int code) {$/;"	m	class:TokenScanner	file:
+INID	Resolve/TokenScanner.java	/^	private int INID(int code) {$/;"	m	class:TokenScanner	file:
+INID	Token/TokenScanner.java	/^	private int INID(int code) {$/;"	m	class:TokenScanner	file:
+INNUM	Resolve/TokenScanner.java	/^	private int INNUM(int code) {$/;"	m	class:TokenScanner	file:
+INNUM	Token/TokenScanner.java	/^	private int INNUM(int code) {$/;"	m	class:TokenScanner	file:
+IdExp	Statement/IdExp.java	/^	public IdExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:IdExp
+IdExp	Statement/IdExp.java	/^public class IdExp extends BaseStmt {$/;"	c
+IfStmt	Statement/IfStmt.java	/^	public IfStmt(TokenScanner scanner) throws ResolveError {$/;"	m	class:IfStmt
+IfStmt	Statement/IfStmt.java	/^public class IfStmt extends BaseStmt {$/;"	c
+IfTree	Node/IfTree.java	/^    public IfTree(){}$/;"	m	class:IfTree
+IfTree	Node/IfTree.java	/^public class IfTree implements Tree{$/;"	c
+Leaf	Node/Leaf.java	/^    public Leaf(){setValue(null);}$/;"	m	class:Leaf
+Leaf	Node/Leaf.java	/^    public Leaf(String value) throws CompileException{$/;"	m	class:Leaf
+Leaf	Node/Leaf.java	/^public class Leaf implements Tree{$/;"	c
+LogicExp	Statement/LogicExp.java	/^	public LogicExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:LogicExp
+LogicExp	Statement/LogicExp.java	/^public class LogicExp extends BaseStmt {$/;"	c
+LogicExpTree	Node/LogicExpTree.java	/^    public LogicExpTree(){}$/;"	m	class:LogicExpTree
+LogicExpTree	Node/LogicExpTree.java	/^public class LogicExpTree implements Tree{$/;"	c
+MATCH_FLAG	Resolve/TokenScanner.java	/^	private boolean			MATCH_FLAG;$/;"	f	class:TokenScanner	file:
+MY_CURRENT	Runtime/Program.java	/^    public static final int MY_CURRENT = 1;$/;"	f	class:Program
+Main	Main.java	/^public class Main {$/;"	c
+MyTree	Node/MyTree.java	/^    public MyTree(){}$/;"	m	class:MyTree
+MyTree	Node/MyTree.java	/^public class MyTree implements Tree{$/;"	c
+Node	Node/AssignTree.java	/^package Node;$/;"	p
+Node	Node/ConstTree.java	/^package Node;$/;"	p
+Node	Node/CurrentTree.java	/^package Node;$/;"	p
+Node	Node/ExpTree.java	/^package Node;$/;"	p
+Node	Node/FactorTree.java	/^package Node;$/;"	p
+Node	Node/IfTree.java	/^package Node;$/;"	p
+Node	Node/Leaf.java	/^package Node;$/;"	p
+Node	Node/LogicExpTree.java	/^package Node;$/;"	p
+Node	Node/MyTree.java	/^package Node;$/;"	p
+Node	Node/OpponentTree.java	/^package Node;$/;"	p
+Node	Node/ProgramTree.java	/^package Node;$/;"	p
+Node	Node/RandomTree.java	/^package Node;$/;"	p
+Node	Node/ReturnTree.java	/^package Node;$/;"	p
+Node	Node/SimpleExpTree.java	/^package Node;$/;"	p
+Node	Node/StmtListTree.java	/^package Node;$/;"	p
+Node	Node/StmtTree.java	/^package Node;$/;"	p
+Node	Node/TermTree.java	/^package Node;$/;"	p
+Node	Node/Tree.java	/^package Node;$/;"	p
+Node	Node/WhileTree.java	/^package Node;$/;"	p
+NumExp	Statement/NumExp.java	/^	public NumExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:NumExp
+NumExp	Statement/NumExp.java	/^public class NumExp extends BaseStmt {$/;"	c
+OPPONENT_CURRENT	Runtime/Program.java	/^    public static final int OPPONENT_CURRENT = 2;$/;"	f	class:Program
+OpponentTree	Node/OpponentTree.java	/^    public OpponentTree(){}$/;"	m	class:OpponentTree
+OpponentTree	Node/OpponentTree.java	/^public class OpponentTree implements Tree{$/;"	c
+Parser	Resolve/Parser.java	/^public class Parser {$/;"	c
+Program	Runtime/Program.java	/^    public Program(ProgramTree programTree) {$/;"	m	class:Program
+Program	Runtime/Program.java	/^public class Program {$/;"	c
+ProgramTree	Node/ProgramTree.java	/^    public ProgramTree() {}$/;"	m	class:ProgramTree
+ProgramTree	Node/ProgramTree.java	/^public class ProgramTree implements Tree {$/;"	c
+RandomExp	Statement/RandomExp.java	/^	public RandomExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:RandomExp
+RandomExp	Statement/RandomExp.java	/^public class RandomExp extends BaseStmt {$/;"	c
+RandomTree	Node/RandomTree.java	/^    public RandomTree(){}$/;"	m	class:RandomTree
+RandomTree	Node/RandomTree.java	/^public class RandomTree implements Tree{$/;"	c
+Resolve	Resolve/Parser.java	/^package Resolve;$/;"	p
+Resolve	Resolve/TokenScanner.java	/^package Resolve;$/;"	p
+ResolveError	Error/ResolveError.java	/^    public ResolveError(String message) {$/;"	m	class:ResolveError
+ResolveError	Error/ResolveError.java	/^public class ResolveError extends Exception{$/;"	c
+ReturnStmt	Statement/ReturnStmt.java	/^	public ReturnStmt(TokenScanner scanner) throws ResolveError {$/;"	m	class:ReturnStmt
+ReturnStmt	Statement/ReturnStmt.java	/^public class ReturnStmt extends BaseStmt {$/;"	c
+ReturnTree	Node/ReturnTree.java	/^    public ReturnTree(){}$/;"	m	class:ReturnTree
+ReturnTree	Node/ReturnTree.java	/^public class ReturnTree implements Tree{$/;"	c
+Runner	Runtime/Runner.java	/^    public Runner(){}$/;"	m	class:Runner
+Runner	Runtime/Runner.java	/^public class Runner {$/;"	c
+RunningError	Error/RunningError.java	/^    public RunningError(String message) {$/;"	m	class:RunningError
+RunningError	Error/RunningError.java	/^public class RunningError extends Exception{$/;"	c
+Runtime	Runtime/GlobalValue.java	/^package Runtime;$/;"	p
+Runtime	Runtime/Program.java	/^package Runtime;$/;"	p
+Runtime	Runtime/Runner.java	/^package Runtime;$/;"	p
+SECOND_RUN	Runtime/Program.java	/^    public static final int SECOND_RUN = 2;$/;"	f	class:Program
+SINGLE_RUN	Runtime/Program.java	/^    public static final int SINGLE_RUN = 0;$/;"	f	class:Program
+START	Resolve/TokenScanner.java	/^	private int START(int code) {$/;"	m	class:TokenScanner	file:
+START	Token/TokenScanner.java	/^	private int START(int code) {$/;"	m	class:TokenScanner	file:
+SimpleExp	Statement/SimpleExp.java	/^	public SimpleExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:SimpleExp
+SimpleExp	Statement/SimpleExp.java	/^public class SimpleExp extends BaseStmt {$/;"	c
+SimpleExpTree	Node/SimpleExpTree.java	/^    public SimpleExpTree(){$/;"	m	class:SimpleExpTree
+SimpleExpTree	Node/SimpleExpTree.java	/^public class SimpleExpTree implements Tree{$/;"	c
+SingleStmt	Statement/SingleStmt.java	/^	public SingleStmt(TokenScanner scanner) throws ResolveError {$/;"	m	class:SingleStmt
+SingleStmt	Statement/SingleStmt.java	/^public class SingleStmt extends BaseStmt {$/;"	c
+Stategy	Statement/Stategy.java	/^	public Stategy(TokenScanner scanner) throws ResolveError {$/;"	m	class:Stategy
+Stategy	Statement/Stategy.java	/^public class Stategy {$/;"	c
+Statement	Statement/AssignStmt.java	/^package Statement;$/;"	p
+Statement	Statement/BaseStmt.java	/^package Statement;$/;"	p
+Statement	Statement/ComplexExp.java	/^package Statement;$/;"	p
+Statement	Statement/ConstExp.java	/^package Statement;$/;"	p
+Statement	Statement/FactorExp.java	/^package Statement;$/;"	p
+Statement	Statement/IdExp.java	/^package Statement;$/;"	p
+Statement	Statement/IfStmt.java	/^package Statement;$/;"	p
+Statement	Statement/LogicExp.java	/^package Statement;$/;"	p
+Statement	Statement/NumExp.java	/^package Statement;$/;"	p
+Statement	Statement/RandomExp.java	/^package Statement;$/;"	p
+Statement	Statement/ReturnStmt.java	/^package Statement;$/;"	p
+Statement	Statement/SimpleExp.java	/^package Statement;$/;"	p
+Statement	Statement/SingleStmt.java	/^package Statement;$/;"	p
+Statement	Statement/Stategy.java	/^package Statement;$/;"	p
+Statement	Statement/StmtSequence.java	/^package Statement;$/;"	p
+Statement	Statement/TermExp.java	/^package Statement;$/;"	p
+Statement	Statement/WhileStmt.java	/^package Statement;$/;"	p
+Statement.Const	Statement/Const/A.java	/^package Statement.Const;$/;"	p
+Statement.Const	Statement/Const/B.java	/^package Statement.Const;$/;"	p
+Statement.Const	Statement/Const/BaseConst.java	/^package Statement.Const;$/;"	p
+Statement.Const	Statement/Const/CUR.java	/^package Statement.Const;$/;"	p
+StmtListTree	Node/StmtListTree.java	/^    public StmtListTree(){$/;"	m	class:StmtListTree
+StmtListTree	Node/StmtListTree.java	/^public class StmtListTree implements Tree{$/;"	c
+StmtSequence	Statement/StmtSequence.java	/^	public StmtSequence(TokenScanner scanner) throws ResolveError {$/;"	m	class:StmtSequence
+StmtSequence	Statement/StmtSequence.java	/^public class StmtSequence extends BaseStmt {$/;"	c
+StmtTree	Node/StmtTree.java	/^    public StmtTree(){$/;"	m	class:StmtTree
+StmtTree	Node/StmtTree.java	/^public class StmtTree implements Tree{$/;"	c
+TermExp	Statement/TermExp.java	/^	public TermExp(TokenScanner scanner) throws ResolveError {$/;"	m	class:TermExp
+TermExp	Statement/TermExp.java	/^public class TermExp extends BaseStmt {$/;"	c
+TermTree	Node/TermTree.java	/^    public TermTree(){$/;"	m	class:TermTree
+TermTree	Node/TermTree.java	/^public class TermTree implements Tree{$/;"	c
+Token	Token/TokenJudge.java	/^package Token;$/;"	p
+Token	Token/TokenScanner.java	/^package Token;$/;"	p
+Token	Token/TokenSequence.java	/^package Token;$/;"	p
+TokenJudge	Token/TokenJudge.java	/^public class TokenJudge {$/;"	c
+TokenScanner	Resolve/TokenScanner.java	/^	public TokenScanner(String fpath) {$/;"	m	class:TokenScanner
+TokenScanner	Resolve/TokenScanner.java	/^public class TokenScanner {$/;"	c
+TokenScanner	Token/TokenScanner.java	/^	public TokenScanner(String fpath) {$/;"	m	class:TokenScanner
+TokenScanner	Token/TokenScanner.java	/^public class TokenScanner {$/;"	c
+TokenSequence	Token/TokenSequence.java	/^    public TokenSequence() {}$/;"	m	class:TokenSequence
+TokenSequence	Token/TokenSequence.java	/^    public TokenSequence(List<String> tokens) {$/;"	m	class:TokenSequence
+TokenSequence	Token/TokenSequence.java	/^public class TokenSequence {$/;"	c
+Tree	Node/Tree.java	/^public interface Tree {$/;"	i
+WhileStmt	Statement/WhileStmt.java	/^	public WhileStmt(TokenScanner scanner) throws ResolveError {$/;"	m	class:WhileStmt
+WhileStmt	Statement/WhileStmt.java	/^public class WhileStmt extends BaseStmt {$/;"	c
+WhileTree	Node/WhileTree.java	/^public class WhileTree implements Tree{$/;"	c
+addStmt	Node/StmtListTree.java	/^    public void addStmt(StmtTree tree){$/;"	m	class:StmtListTree
+addops	Node/SimpleExpTree.java	/^    private List<String> addops;$/;"	f	class:SimpleExpTree	file:
+assignTree	Node/StmtTree.java	/^    private AssignTree assignTree;$/;"	f	class:StmtTree	file:
+battle	BattleEntry.java	/^    public static void battle(Runner runner, String s1, String s2, int round, boolean record) throws RunningException {$/;"	m	class:BattleEntry
+battle	BattleEntry.java	/^    public static void battle(Runner runner, int round) throws RunningException{$/;"	m	class:BattleEntry
+battle	Cmd.java	/^    private void battle() throws CmdException, RunningException{$/;"	m	class:Cmd	file:
+clearGlobalVal	Runtime/GlobalValue.java	/^    public static void clearGlobalVal(){$/;"	m	class:GlobalValue
+clearLocalVal	Runtime/Program.java	/^    public void clearLocalVal(){$/;"	m	class:Program
+close	Resolve/TokenScanner.java	/^	public void close() {$/;"	m	class:TokenScanner
+cmd	Cmd.java	/^    private List<String> cmd;$/;"	f	class:Cmd	file:
+comp	Node/LogicExpTree.java	/^    private Leaf comp;$/;"	f	class:LogicExpTree	file:
+complexExp	Statement/AssignStmt.java	/^	private ComplexExp  complexExp;$/;"	f	class:AssignStmt	file:
+complexExp	Statement/IfStmt.java	/^	private ComplexExp 	 complexExp;$/;"	f	class:IfStmt	file:
+complexExp	Statement/RandomExp.java	/^	private ComplexExp complexExp;$/;"	f	class:RandomExp	file:
+complexExp	Statement/ReturnStmt.java	/^	private ComplexExp complexExp;$/;"	f	class:ReturnStmt	file:
+complexExp	Statement/WhileStmt.java	/^	private ComplexExp	 complexExp;$/;"	f	class:WhileStmt	file:
+con	Node/FactorTree.java	/^    private ConstTree con;$/;"	f	class:FactorTree	file:
+condition	Node/ConstTree.java	/^    private String condition;$/;"	f	class:ConstTree	file:
+condition	Node/ExpTree.java	/^    private String condition;$/;"	f	class:ExpTree	file:
+condition	Node/FactorTree.java	/^    private String condition;$/;"	f	class:FactorTree	file:
+condition	Node/IfTree.java	/^    private String condition;$/;"	f	class:IfTree	file:
+condition	Node/Leaf.java	/^    private String condition;$/;"	f	class:Leaf	file:
+condition	Node/LogicExpTree.java	/^    private String condition;$/;"	f	class:LogicExpTree	file:
+condition	Node/StmtTree.java	/^    private String condition;$/;"	f	class:StmtTree	file:
+contain	Runtime/GlobalValue.java	/^    public static boolean contain(String id){$/;"	m	class:GlobalValue
+current	Node/ConstTree.java	/^    private CurrentTree current;$/;"	f	class:ConstTree	file:
+currentToken	Resolve/TokenScanner.java	/^    private String			currentToken;$/;"	f	class:TokenScanner	file:
+currentToken	Token/TokenScanner.java	/^    private String			currentToken;$/;"	f	class:TokenScanner	file:
+cursor	Node/StmtListTree.java	/^    private StmtTree cursor;$/;"	f	class:StmtListTree	file:
+elsePart	Node/IfTree.java	/^    private StmtListTree elsePart;$/;"	f	class:IfTree	file:
+elseStmt	Statement/IfStmt.java	/^	private StmtSequence elseStmt;$/;"	f	class:IfStmt	file:
+execute	Cmd.java	/^    public void execute() throws CompileException, CmdException, RunningException{$/;"	m	class:Cmd
+exp	Node/AssignTree.java	/^    private ExpTree exp;$/;"	f	class:AssignTree	file:
+exp	Node/FactorTree.java	/^    private ExpTree exp;$/;"	f	class:FactorTree	file:
+exp	Node/MyTree.java	/^    private ExpTree exp;$/;"	f	class:MyTree	file:
+exp	Node/OpponentTree.java	/^    private ExpTree exp;$/;"	f	class:OpponentTree	file:
+exp	Node/RandomTree.java	/^    private ExpTree exp;$/;"	f	class:RandomTree	file:
+exp	Node/ReturnTree.java	/^    private ExpTree exp;$/;"	f	class:ReturnTree	file:
+exp	Node/WhileTree.java	/^    private ExpTree exp;$/;"	f	class:WhileTree	file:
+expr	Statement/ConstExp.java	/^	private BaseConst expr;$/;"	f	class:ConstExp	file:
+factor_01	Statement/TermExp.java	/^	private FactorExp factor_01;$/;"	f	class:TermExp	file:
+factor_02	Statement/TermExp.java	/^	private FactorExp factor_02;$/;"	f	class:TermExp	file:
+factors	Node/TermTree.java	/^    private List<FactorTree> factors;$/;"	f	class:TermTree	file:
+file	Resolve/TokenScanner.java	/^	private BufferedReader	file;$/;"	f	class:TokenScanner	file:
+file	Token/TokenScanner.java	/^	private BufferedReader	file;$/;"	f	class:TokenScanner	file:
+firstStmt	Node/StmtListTree.java	/^    private StmtTree firstStmt;$/;"	f	class:StmtListTree	file:
+getCondition	Node/ConstTree.java	/^    public String getCondition() {$/;"	m	class:ConstTree
+getCondition	Node/ExpTree.java	/^    public String getCondition() {$/;"	m	class:ExpTree
+getCondition	Node/FactorTree.java	/^    public String getCondition() {$/;"	m	class:FactorTree
+getCondition	Node/IfTree.java	/^    public String getCondition() {$/;"	m	class:IfTree
+getCondition	Node/Leaf.java	/^    public String getCondition() {$/;"	m	class:Leaf
+getCondition	Node/LogicExpTree.java	/^    public String getCondition() {$/;"	m	class:LogicExpTree
+getCondition	Node/StmtTree.java	/^    public String getCondition() {$/;"	m	class:StmtTree
+getGlobalVal	Runtime/GlobalValue.java	/^    public static Object getGlobalVal(String id) {$/;"	m	class:GlobalValue
+getLocalVal	Runtime/Program.java	/^    public Map<String, Integer> getLocalVal() {$/;"	m	class:Program
+getNextChar	Resolve/TokenScanner.java	/^	private int getNextChar() {$/;"	m	class:TokenScanner	file:
+getNextChar	Token/TokenScanner.java	/^	private int getNextChar() {$/;"	m	class:TokenScanner	file:
+getProgram	Runtime/GlobalValue.java	/^    public static Program getProgram(String name){$/;"	m	class:GlobalValue
+getPrograms	Runtime/GlobalValue.java	/^    public static Map<String, Program> getPrograms(){$/;"	m	class:GlobalValue
+getToken	Resolve/TokenScanner.java	/^    public String getToken() throws ResolveError {$/;"	m	class:TokenScanner
+getTokenIndex	Token/TokenSequence.java	/^    public static int getTokenIndex() {$/;"	m	class:TokenSequence
+getTokens	Token/TokenScanner.java	/^    public String getTokens() throws ResolveError {$/;"	m	class:TokenScanner
+getTokens	Token/TokenSequence.java	/^    public List<String> getTokens() {$/;"	m	class:TokenSequence
+getValue	Node/Leaf.java	/^    public String getValue() {$/;"	m	class:Leaf
+globalVal	Runtime/GlobalValue.java	/^    private static Map<String, Object> globalVal = new HashMap<>();$/;"	f	class:GlobalValue	file:
+grow	Node/AssignTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:AssignTree
+grow	Node/ConstTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:ConstTree
+grow	Node/CurrentTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:CurrentTree
+grow	Node/ExpTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:ExpTree
+grow	Node/FactorTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:FactorTree
+grow	Node/IfTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:IfTree
+grow	Node/Leaf.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:Leaf
+grow	Node/LogicExpTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:LogicExpTree
+grow	Node/MyTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:MyTree
+grow	Node/OpponentTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:OpponentTree
+grow	Node/ProgramTree.java	/^    public void grow(TokenList tokens) throws CompileException{$/;"	m	class:ProgramTree
+grow	Node/RandomTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:RandomTree
+grow	Node/ReturnTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:ReturnTree
+grow	Node/SimpleExpTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:SimpleExpTree
+grow	Node/StmtListTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:StmtListTree
+grow	Node/StmtTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:StmtTree
+grow	Node/TermTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:TermTree
+grow	Node/Tree.java	/^    void grow(TokenList tokens) throws CompileException;$/;"	m	interface:Tree
+grow	Node/WhileTree.java	/^    public void grow(TokenList tokens) throws CompileException {$/;"	m	class:WhileTree
+hasNext	Node/StmtTree.java	/^    public boolean hasNext(){$/;"	m	class:StmtTree
+hasProgram	Runtime/GlobalValue.java	/^    public static boolean hasProgram(String name){$/;"	m	class:GlobalValue
+help	Cmd.java	/^    private static Map<String, String> help;$/;"	f	class:Cmd	file:
+help	Cmd.java	/^    private void help() throws CmdException{$/;"	m	class:Cmd	file:
+id	Node/AssignTree.java	/^    private Leaf id;$/;"	f	class:AssignTree	file:
+idExp	Statement/AssignStmt.java	/^	private IdExp		idExp;$/;"	f	class:AssignStmt	file:
+identifier	Statement/IdExp.java	/^	private String identifier;$/;"	f	class:IdExp	file:
+ifPart	Node/IfTree.java	/^    private ExpTree ifPart;$/;"	f	class:IfTree	file:
+ifTree	Node/StmtTree.java	/^    private IfTree ifTree;$/;"	f	class:StmtTree	file:
+index	Statement/Const/A.java	/^	private ComplexExp index;$/;"	f	class:A	file:
+index	Statement/Const/B.java	/^	private ComplexExp index;$/;"	f	class:B	file:
+inputProgram	Runtime/GlobalValue.java	/^    public static void inputProgram(String name, ProgramTree program){$/;"	m	class:GlobalValue
+isAddop	Token/TokenJudge.java	/^    public static boolean isAddop(String token){$/;"	m	class:TokenJudge
+isComp	Token/TokenJudge.java	/^    public static boolean isComp(String token){$/;"	m	class:TokenJudge
+isConst	Token/TokenJudge.java	/^    public static boolean isConst(String token){$/;"	m	class:TokenJudge
+isId	Token/TokenJudge.java	/^    public static boolean isId(String token){$/;"	m	class:TokenJudge
+isLimit	Token/TokenJudge.java	/^    public static boolean isLimit(String token){$/;"	m	class:TokenJudge
+isLogic	Token/TokenJudge.java	/^    public static boolean isLogic(String token){$/;"	m	class:TokenJudge
+isMulop	Token/TokenJudge.java	/^    public static boolean isMulop(String token){$/;"	m	class:TokenJudge
+isNum	Token/TokenJudge.java	/^    public static boolean isNum(String token){$/;"	m	class:TokenJudge
+isOp	Token/TokenJudge.java	/^    public static boolean isOp(char op){$/;"	m	class:TokenJudge
+isToken	Token/TokenJudge.java	/^    public static boolean isToken(String token) {$/;"	m	class:TokenJudge
+left	Node/ExpTree.java	/^    private LogicExpTree left;$/;"	f	class:ExpTree	file:
+left	Node/LogicExpTree.java	/^    private SimpleExpTree left;$/;"	f	class:LogicExpTree	file:
+limits	Token/TokenJudge.java	/^    private static final List<String> limits$/;"	f	class:TokenJudge	file:
+lineBuf	Resolve/TokenScanner.java	/^	private String			lineBuf;$/;"	f	class:TokenScanner	file:
+lineBuf	Token/TokenScanner.java	/^	private String			lineBuf;$/;"	f	class:TokenScanner	file:
+lineIndex	Resolve/TokenScanner.java	/^	private int				lineIndex;$/;"	f	class:TokenScanner	file:
+lineIndex	Token/TokenScanner.java	/^	private int				lineIndex;$/;"	f	class:TokenScanner	file:
+lineNo	Resolve/TokenScanner.java	/^	private int				lineNo;$/;"	f	class:TokenScanner	file:
+lineNo	Token/TokenScanner.java	/^	private int				lineNo;$/;"	f	class:TokenScanner	file:
+load	Cmd.java	/^    private void load() throws CompileException, CmdException{$/;"	m	class:Cmd	file:
+load	Runtime/Runner.java	/^    public boolean load(String path) throws CompileException{$/;"	m	class:Runner
+localVal	Runtime/Program.java	/^    private Map<String, Integer> localVal;$/;"	f	class:Program	file:
+logic	Node/ExpTree.java	/^    private Leaf logic;$/;"	f	class:ExpTree	file:
+logicExp_01	Statement/ComplexExp.java	/^	private LogicExp logicExp_01;$/;"	f	class:ComplexExp	file:
+logicExp_02	Statement/ComplexExp.java	/^	private LogicExp logicExp_02;$/;"	f	class:ComplexExp	file:
+ls	Cmd.java	/^    private void ls() throws CmdException{$/;"	m	class:Cmd	file:
+main	BattleEntry.java	/^    public static void main(String args[]){$/;"	m	class:BattleEntry
+main	Main.java	/^    public static void main(String args[]){$/;"	m	class:Main
+main	Resolve/Parser.java	/^    public static void main(String args[]) {$/;"	m	class:Parser
+main	Resolve/TokenScanner.java	/^    public static void main(String args[]) {$/;"	m	class:TokenScanner
+main	Runtime/Runner.java	/^    public static void main(String args[]){$/;"	m	class:Runner
+main	Token/TokenJudge.java	/^    public static void main(String args[]){$/;"	m	class:TokenJudge
+main	Token/TokenScanner.java	/^    public static void main(String args[]) {$/;"	m	class:TokenScanner
+match	Resolve/TokenScanner.java	/^	public boolean match(String token) {$/;"	m	class:TokenScanner
+mulops	Node/TermTree.java	/^    private List<String> mulops;$/;"	f	class:TermTree	file:
+my	Node/ConstTree.java	/^    private MyTree my;$/;"	f	class:ConstTree	file:
+name	Node/ProgramTree.java	/^    private Leaf name;$/;"	f	class:ProgramTree	file:
+nextStmt	Node/StmtTree.java	/^    private StmtTree nextStmt;$/;"	f	class:StmtTree	file:
+number	Statement/NumExp.java	/^	private String  number;$/;"	f	class:NumExp	file:
+opponent	Node/ConstTree.java	/^    private OpponentTree opponent;$/;"	f	class:ConstTree	file:
+ops	Token/TokenJudge.java	/^    private static final List<String> ops$/;"	f	class:TokenJudge	file:
+option	Statement/ComplexExp.java	/^	private String	 option;$/;"	f	class:ComplexExp	file:
+option	Statement/LogicExp.java	/^	private String	  option;$/;"	f	class:LogicExp	file:
+option	Statement/SimpleExp.java	/^	private String	option;$/;"	f	class:SimpleExp	file:
+option	Statement/TermExp.java	/^	private String	  option;$/;"	f	class:TermExp	file:
+overflow	Token/TokenSequence.java	/^    public boolean overflow() {$/;"	m	class:TokenSequence
+parse	Resolve/Parser.java	/^    public static Stategy parse(String fpath) throws ResolveError {$/;"	m	class:Parser
+pointCounter	BattleEntry.java	/^    private static Map<String, Integer> pointCounter = new HashMap<>();$/;"	f	class:BattleEntry	file:
+print	Node/AssignTree.java	/^    public void print(int deep) {$/;"	m	class:AssignTree
+print	Node/ConstTree.java	/^    public void print(int deep) {$/;"	m	class:ConstTree
+print	Node/CurrentTree.java	/^    public void print(int deep) {$/;"	m	class:CurrentTree
+print	Node/ExpTree.java	/^    public void print(int deep) {$/;"	m	class:ExpTree
+print	Node/FactorTree.java	/^    public void print(int deep) {$/;"	m	class:FactorTree
+print	Node/IfTree.java	/^    public void print(int deep) {$/;"	m	class:IfTree
+print	Node/Leaf.java	/^    public void print(int deep) {$/;"	m	class:Leaf
+print	Node/LogicExpTree.java	/^    public void print(int deep) {$/;"	m	class:LogicExpTree
+print	Node/MyTree.java	/^    public void print(int deep) {$/;"	m	class:MyTree
+print	Node/OpponentTree.java	/^    public void print(int deep) {$/;"	m	class:OpponentTree
+print	Node/ProgramTree.java	/^    public void print(int deep) {$/;"	m	class:ProgramTree
+print	Node/RandomTree.java	/^    public void print(int deep) {$/;"	m	class:RandomTree
+print	Node/ReturnTree.java	/^    public void print(int deep) {$/;"	m	class:ReturnTree
+print	Node/SimpleExpTree.java	/^    public void print(int deep) {$/;"	m	class:SimpleExpTree
+print	Node/StmtListTree.java	/^    public void print(int deep) {$/;"	m	class:StmtListTree
+print	Node/StmtTree.java	/^    public void print(int deep) {$/;"	m	class:StmtTree
+print	Node/TermTree.java	/^    public void print(int deep) {$/;"	m	class:TermTree
+print	Node/Tree.java	/^    void print(int deep);$/;"	m	interface:Tree
+print	Node/WhileTree.java	/^    public void print(int deep) {$/;"	m	class:WhileTree
+print	Statement/AssignStmt.java	/^	public void print(int deep) {$/;"	m	class:AssignStmt
+print	Statement/BaseStmt.java	/^	public void print(int deep) {$/;"	m	class:BaseStmt
+print	Statement/ComplexExp.java	/^	public void print(int deep) {$/;"	m	class:ComplexExp
+print	Statement/Const/A.java	/^	public void print(int deep) {$/;"	m	class:A
+print	Statement/Const/B.java	/^	public void print(int deep) {$/;"	m	class:B
+print	Statement/Const/BaseConst.java	/^	public void print(int deep) {$/;"	m	class:BaseConst
+print	Statement/Const/CUR.java	/^	public void print(int deep) {$/;"	m	class:CUR
+print	Statement/ConstExp.java	/^	public void print(int deep) {$/;"	m	class:ConstExp
+print	Statement/FactorExp.java	/^	public void print(int deep) {$/;"	m	class:FactorExp
+print	Statement/IdExp.java	/^	public void print(int deep) {$/;"	m	class:IdExp
+print	Statement/IfStmt.java	/^	public void print(int deep) {$/;"	m	class:IfStmt
+print	Statement/LogicExp.java	/^	public void print(int deep) {$/;"	m	class:LogicExp
+print	Statement/NumExp.java	/^	public void print(int deep) {$/;"	m	class:NumExp
+print	Statement/RandomExp.java	/^	public void print(int deep) {$/;"	m	class:RandomExp
+print	Statement/ReturnStmt.java	/^	public void print(int deep) {$/;"	m	class:ReturnStmt
+print	Statement/SimpleExp.java	/^	public void print(int deep) {$/;"	m	class:SimpleExp
+print	Statement/SingleStmt.java	/^	public void print(int deep) {$/;"	m	class:SingleStmt
+print	Statement/Stategy.java	/^	public void print() {$/;"	m	class:Stategy
+print	Statement/StmtSequence.java	/^	public void print(int deep) {$/;"	m	class:StmtSequence
+print	Statement/TermExp.java	/^	public void print(int deep) {$/;"	m	class:TermExp
+print	Statement/WhileStmt.java	/^	public void print(int deep) {$/;"	m	class:WhileStmt
+printAllPrograms	Runtime/GlobalValue.java	/^    public static void printAllPrograms(){$/;"	m	class:GlobalValue
+printTree	Runtime/Program.java	/^    public void printTree(){$/;"	m	class:Program
+programTree	Runtime/Program.java	/^    private ProgramTree programTree;$/;"	f	class:Program	file:
+programs	Runtime/GlobalValue.java	/^    private static Map<String, Program> programs = new HashMap<>();$/;"	f	class:GlobalValue	file:
+random	Node/FactorTree.java	/^    private RandomTree random;$/;"	f	class:FactorTree	file:
+read	Token/TokenSequence.java	/^    public String read() {$/;"	m	class:TokenSequence
+reset	Token/TokenSequence.java	/^    public static void reset() {$/;"	m	class:TokenSequence
+returnTree	Node/StmtTree.java	/^    private ReturnTree returnTree;$/;"	f	class:StmtTree	file:
+right	Node/ExpTree.java	/^    private LogicExpTree right;$/;"	f	class:ExpTree	file:
+right	Node/LogicExpTree.java	/^    private SimpleExpTree right;$/;"	f	class:LogicExpTree	file:
+run	Cmd.java	/^    private void run() throws CmdException, RunningException{$/;"	m	class:Cmd	file:
+run	Node/AssignTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:AssignTree
+run	Node/ConstTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:ConstTree
+run	Node/CurrentTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:CurrentTree
+run	Node/ExpTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:ExpTree
+run	Node/FactorTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:FactorTree
+run	Node/IfTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:IfTree
+run	Node/Leaf.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:Leaf
+run	Node/LogicExpTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:LogicExpTree
+run	Node/MyTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:MyTree
+run	Node/OpponentTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:OpponentTree
+run	Node/ProgramTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:ProgramTree
+run	Node/RandomTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:RandomTree
+run	Node/ReturnTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:ReturnTree
+run	Node/SimpleExpTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:SimpleExpTree
+run	Node/StmtListTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:StmtListTree
+run	Node/StmtTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:StmtTree
+run	Node/TermTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:TermTree
+run	Node/Tree.java	/^    Integer run(Map<String, Integer> localVal) throws RunningException;$/;"	m	interface:Tree
+run	Node/WhileTree.java	/^    public Integer run(Map<String, Integer> localVal) throws RunningException {$/;"	m	class:WhileTree
+run	Runtime/Program.java	/^    public Integer run() throws RunningException{$/;"	m	class:Program
+run	Runtime/Program.java	/^    public Integer run(int order) throws RunningException{$/;"	m	class:Program
+run	Runtime/Runner.java	/^    public Integer run(String name) throws RunningException{$/;"	m	class:Runner
+run	Runtime/Runner.java	/^    public Integer run(String name, int order) throws RunningException{$/;"	m	class:Runner
+runner	Cmd.java	/^    private static Runner runner;$/;"	f	class:Cmd	file:
+sequence	Statement/Stategy.java	/^	private StmtSequence sequence;$/;"	f	class:Stategy	file:
+sequence	Statement/StmtSequence.java	/^	private StmtSequence sequence;$/;"	f	class:StmtSequence	file:
+sequence	Statement/WhileStmt.java	/^	private StmtSequence sequence;$/;"	f	class:WhileStmt	file:
+setCondition	Node/ConstTree.java	/^    public void setCondition(String condition) {$/;"	m	class:ConstTree
+setCondition	Node/ExpTree.java	/^    public void setCondition(String condition) {$/;"	m	class:ExpTree
+setCondition	Node/FactorTree.java	/^    public void setCondition(String condition) {$/;"	m	class:FactorTree
+setCondition	Node/IfTree.java	/^    public void setCondition(String condition) {$/;"	m	class:IfTree
+setCondition	Node/Leaf.java	/^    public void setCondition(String condition) {$/;"	m	class:Leaf
+setCondition	Node/LogicExpTree.java	/^    public void setCondition(String condition) {$/;"	m	class:LogicExpTree
+setCondition	Node/StmtTree.java	/^    public void setCondition(String condition) {$/;"	m	class:StmtTree
+setGlobalVal	Runtime/GlobalValue.java	/^    public static void setGlobalVal(String id, Object value){$/;"	m	class:GlobalValue
+setLocalVal	Runtime/Program.java	/^    public void setLocalVal(String id, Integer value) {$/;"	m	class:Program
+setNextStmt	Node/StmtTree.java	/^    public void setNextStmt(StmtTree nextStmt) {$/;"	m	class:StmtTree
+setValue	Node/Leaf.java	/^    public void setValue(String value) {$/;"	m	class:Leaf
+show	Cmd.java	/^    private void show() throws CmdException{$/;"	m	class:Cmd	file:
+simpleExp_01	Statement/LogicExp.java	/^	private SimpleExp simpleExp_01;$/;"	f	class:LogicExp	file:
+simpleExp_02	Statement/LogicExp.java	/^	private SimpleExp simpleExp_02;$/;"	f	class:LogicExp	file:
+single	Statement/StmtSequence.java	/^	private SingleStmt	 single;$/;"	f	class:StmtSequence	file:
+stmt	Statement/FactorExp.java	/^	private BaseStmt stmt;$/;"	f	class:FactorExp	file:
+stmt	Statement/SingleStmt.java	/^	private BaseStmt stmt;$/;"	f	class:SingleStmt	file:
+stmtList	Node/ProgramTree.java	/^    private StmtListTree stmtList;$/;"	f	class:ProgramTree	file:
+stmts	Node/WhileTree.java	/^    private StmtListTree stmts;$/;"	f	class:WhileTree	file:
+term_01	Statement/SimpleExp.java	/^	private TermExp term_01;$/;"	f	class:SimpleExp	file:
+term_02	Statement/SimpleExp.java	/^	private TermExp term_02;$/;"	f	class:SimpleExp	file:
+terms	Node/SimpleExpTree.java	/^    private List<TermTree> terms;$/;"	f	class:SimpleExpTree	file:
+thenPart	Node/IfTree.java	/^    private StmtListTree thenPart;$/;"	f	class:IfTree	file:
+thenStmt	Statement/IfStmt.java	/^	private StmtSequence thenStmt;$/;"	f	class:IfStmt	file:
+tips	Error/CmdError.java	/^    private static final String tips = "you can input 'help' to see how to use";$/;"	f	class:CmdError	file:
+tokenIndex	Token/TokenSequence.java	/^    private static int tokenIndex;$/;"	f	class:TokenSequence	file:
+tokens	Token/TokenSequence.java	/^    private List<String> tokens;$/;"	f	class:TokenSequence	file:
+ungetNextChar	Resolve/TokenScanner.java	/^	private void ungetNextChar() {$/;"	m	class:TokenScanner	file:
+ungetNextChar	Token/TokenScanner.java	/^	private void ungetNextChar() {$/;"	m	class:TokenScanner	file:
+value	Node/FactorTree.java	/^    private Leaf value;$/;"	f	class:FactorTree	file:
+value	Node/Leaf.java	/^    private String value;$/;"	f	class:Leaf	file:
+watch	Token/TokenSequence.java	/^    public String watch() {$/;"	m	class:TokenSequence
+whileTree	Node/StmtTree.java	/^    private WhileTree whileTree;$/;"	f	class:StmtTree	file:

@@ -1,0 +1,12 @@
+if a = 0 then
+	a := 1
+else 
+	a := 9
+end
+
+
+while x > 0
+do
+	s := 0;
+	s := 1
+end

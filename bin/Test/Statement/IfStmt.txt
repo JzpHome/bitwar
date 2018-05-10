@@ -1,0 +1,5 @@
+if a = 0 then
+	a := 1
+else 
+	a := 9
+end
