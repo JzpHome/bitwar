@@ -6,8 +6,6 @@ default:
 	javac -d . -cp . ../Compiler/SymbolTable.java
 	# 语法分析
 	javac -d . -cp . ../Compiler/TokenScanner.java
-	# 常量表达式
-	javac -d . -cp . ../Statement/Expression/Const/*.java
 	# 基本表达式
 	javac -d . -cp . ../Statement/Expression/*.java
 	# 基本语句
@@ -27,9 +25,6 @@ test_expr:
 	# 测试基本表达式
 	java Statement.Expression.IdExp
 	java Statement.Expression.NumExp
-	java Statement.Expression.Const.CUR
-	java Statement.Expression.Const.A
-	java Statement.Expression.Const.B
 	java Statement.Expression.RandomExp
 	java Statement.Expression.ConstExp
 	java Statement.Expression.FactorExp
