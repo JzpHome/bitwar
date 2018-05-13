@@ -1,0 +1,5 @@
+if a=0 then
+	a:=1
+else 
+	a:=(A[99])/s-1 = sss and s
+end

@@ -1,0 +1,3 @@
+RANDOM(1)
+RANDOM(CUR)
+RANDOM((A[99])/s-1 = sss and s)

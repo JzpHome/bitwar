@@ -1,0 +1,13 @@
+Stategy T3:
+	if 0 < x then { don't compute if x <= 0 }
+		fact := 1;
+		while x > 0 do 
+			fact := fact * x;
+			x := x - 1
+		end
+	else
+		A[1] := 100;
+		return 100
+		{ write fact  { output factorial of x }
+	end
+end

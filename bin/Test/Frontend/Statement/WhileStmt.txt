@@ -1,0 +1,4 @@
+while x>0 do
+	s:=0;
+	a:=(A[99])/s-1 = sss and s
+end
