@@ -1,0 +1,12 @@
+Stategy T4:
+	if CUR = 1 then
+		return 1
+	else 
+		i := RANDOM(9);
+		if i = 8 then
+			return 0
+		else 
+			return B[CUR-1]
+		end
+	end
+end

@@ -1,14 +1,12 @@
 package Frontend;
 
-// 前端
 import java.io.File;
+import Error.BaseError;
 import Frontend.Statement.Stategy;
-// 错误异常
-import MyExecption.*;
 
 @SuppressWarnings("all")
 public class Parser {
-    public static Stategy parse(String fpath) throws FrontendExecption {
+    public static Stategy parse(String fpath) throws BaseError {
 		TokenScanner scanner = new TokenScanner(fpath);
 
 		String token = new String(scanner.getToken());
@@ -16,7 +14,7 @@ public class Parser {
 			Stategy stategy = new Stategy(scanner);
 			return stategy;
 		} else {
-			throw (new FrontendExecption("Parser: " + token + " is not 'Stategy'"));
+			throw (new BaseError("Parser: " + token + " is not 'Stategy'"));
 		}
     }
 
@@ -31,8 +29,8 @@ public class Parser {
 			stategy = parse("Test/Frontend/Parser_03.txt");
 			System.out.println(stategy.toString());
 
-		} catch (FrontendExecption re) {
-			System.out.println(re.getMessage());
+		} catch (BaseError e) {
+			System.out.println(e.getMessage());
 		}
     }
 }

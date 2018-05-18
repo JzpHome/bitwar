@@ -1,16 +1,16 @@
 package Frontend.Statement;
 
-// 前端
+import Error.BaseError;
+import Error.Frontend.*;
 import Frontend.TokenScanner;
-import Frontend.Statement.Expression.*;
-// 错误异常
-import MyExecption.*;
+import Frontend.Statement.Expression.IdExp;
+import Frontend.Statement.Expression.ComplexExp;
 
 public class AssignStmt extends BaseStmt {
 	private IdExp		__id;
 	private ComplexExp  __expr;
 
-	public AssignStmt(TokenScanner scanner) throws FrontendExecption {
+	public AssignStmt(TokenScanner scanner) throws BaseError {
 		__id	= null;
 		__expr	= null;
 
@@ -34,15 +34,22 @@ public class AssignStmt extends BaseStmt {
 		String result = "";
 
 		result += __id.toString();
-
 		result += " := ";
-
 		result += __expr.toString();
 
 		return result;
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		__id.print(deep);
+
+		super.print(deep);
+		System.out.println(":=");
+
+		__expr.print(deep);
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		__id	= new IdExp(scanner);
 
 		String token = scanner.getToken();
@@ -51,7 +58,8 @@ public class AssignStmt extends BaseStmt {
 
 			__expr = new ComplexExp(scanner);
 		} else {
-			throw (new FrontendExecption("AssignStmt: " + token + " is not ':='"));
+			throw (new StmtError("AssignStmt", scanner.fpath(), scanner.lineno(), 
+						scanner.linepos(), token + " is not ':='"));
 		}
 	}
 
@@ -65,10 +73,11 @@ public class AssignStmt extends BaseStmt {
 				token = scanner.getToken();
 
 				System.out.println(stmt.toString());
+				stmt.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

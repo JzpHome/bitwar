@@ -1,38 +1,43 @@
 package Frontend.Statement.Expression;
 
-// 前端
+import Error.BaseError;
+import Error.Frontend.*;
 import Frontend.TokenScanner;
-// 错误异常
-import MyExecption.*;
 
 public class NumExp extends BaseExp {
 	private String  __number;
 
-	public NumExp(TokenScanner scanner) throws FrontendExecption {
+	public NumExp(TokenScanner scanner) throws BaseError {
 		__number = null;
 		
 		scan(scanner);
-	}
-
-	public String Number() {
-		return (new String(__number));
 	}
 
 	public NumExp(NumExp num) {
 		__number = new String(num.__number);
 	}
 
+	public String Number() {
+		return (new String(__number));
+	}
+
 	public String toString() {
 		return (new String(__number));
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		super.print(deep);
+		System.out.println(__number);
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		String token = scanner.getToken();
 		if(token.matches("[1-9][0-9]*|0")) {
 			scanner.match(token);
 			__number = new String(token);
 		} else {
-			throw (new FrontendExecption("NumExp: '" + token + "' is not num"));
+			throw (new ExprError("NumExp", scanner.fpath(), scanner.lineno(), 
+						scanner.linepos(), "'" + token + "' is not num"));
 		}
 	}
 
@@ -40,15 +45,17 @@ public class NumExp extends BaseExp {
 		try {
 			TokenScanner scanner = new TokenScanner("Test/Frontend/Statement/Expression/NumExp.txt");
 
-			String token = new String(scanner.getToken());
+			String token = scanner.getToken();
 			while(!token.equals("")) {
 				NumExp num = new NumExp(scanner);
 				System.out.println("NUM: " + num.toString());
 
-				scanner.match(token);
-				token = new String(scanner.getToken());
+				num.print(1);
+				System.out.println();
+
+				token = scanner.getToken();
 			}
-		} catch (FrontendExecption e) {
+		} catch (BaseError e) {
 			System.err.println(e.getMessage());
 		}
 	}

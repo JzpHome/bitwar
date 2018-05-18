@@ -1,20 +1,19 @@
 package Frontend.Statement;
 
-// 前端
+import Error.BaseError;
+import Error.Frontend.*;
 import Frontend.TokenScanner;
-import Frontend.Statement.Expression.*;
-// 错误异常
-import MyExecption.*;
+import Frontend.Statement.Expression.ComplexExp;
 
 public class IfStmt extends BaseStmt {
 	private ComplexExp 	 __condi;
 	private StmtSequence __stmt_01;
 	private StmtSequence __stmt_02;
 
-	public IfStmt(TokenScanner scanner) throws FrontendExecption {
-		__condi	= null;
-		__stmt_01		= null;
-		__stmt_02		= null;
+	public IfStmt(TokenScanner scanner) throws BaseError {
+		__condi		= null;
+		__stmt_01	= null;
+		__stmt_02	= null;
 
 		scan(scanner);
 	}
@@ -50,7 +49,6 @@ public class IfStmt extends BaseStmt {
 		String result = "if ";
 
 		result += __condi.toString();
-
 		result += " then " + __stmt_01.toString();
 
 		if(__stmt_02 != null) {
@@ -60,7 +58,29 @@ public class IfStmt extends BaseStmt {
 		return (result + " end");
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		super.print(deep);
+		System.out.println("if");
+
+		__condi.print(deep+1);
+
+		super.print(deep);
+		System.out.println("then");
+
+		__stmt_01.print(deep+1);
+
+		if(__stmt_02 != null) {
+			super.print(deep);
+			System.out.println("else");
+
+			__stmt_02.print(deep+1);
+		}
+
+		super.print(deep);
+		System.out.println("end");
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		String token = scanner.getToken();
 		if(token.equals("if")) {
 			scanner.match("if");
@@ -82,13 +102,16 @@ public class IfStmt extends BaseStmt {
 				if(token.equals("end")) {
 					scanner.match("end");
 				} else {
-					throw (new FrontendExecption("IfStmt: " + token + " is not 'end'"));
+					throw (new StmtError("IfStmt", scanner.fpath(), scanner.lineno(), 
+								scanner.linepos(), "'" + token + "' is not 'end'"));
 				}
 			} else {
-				throw (new FrontendExecption("IfStmt: " + token + " is not 'then'"));
+				throw (new StmtError("IfStmt", scanner.fpath(), scanner.lineno(), 
+							scanner.linepos(), "'" + token + "' is not 'then'"));
 			}
 		} else {
-			throw (new FrontendExecption("IfStmt: " + token + " is not 'if'"));
+			throw (new StmtError("IfStmt", scanner.fpath(), scanner.lineno(), 
+						scanner.linepos(), "'" + token + "' is not 'if'"));
 		}
 	}
 
@@ -102,10 +125,11 @@ public class IfStmt extends BaseStmt {
 				token = scanner.getToken();
 
 				System.out.println(stmt.toString());
+				stmt.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

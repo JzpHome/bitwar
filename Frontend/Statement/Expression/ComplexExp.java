@@ -1,16 +1,14 @@
 package Frontend.Statement.Expression;
 
-// 前端
+import Error.BaseError;
 import Frontend.TokenScanner;
-// 错误异常
-import MyExecption.*;
 
 public class ComplexExp extends BaseExp {
 	private LogicExp __expr_01;
 	private String	 __option;
 	private LogicExp __expr_02;
 
-	public ComplexExp(TokenScanner scanner) throws FrontendExecption {
+	public ComplexExp(TokenScanner scanner) throws BaseError {
 		__expr_01	= null;
 		__option	= null;
 		__expr_02	= null;
@@ -62,7 +60,18 @@ public class ComplexExp extends BaseExp {
 		}
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		__expr_01.print(deep);
+
+		if(__option != null) {
+			super.print(deep);
+			System.out.println(__option);
+
+			__expr_02.print(deep);
+		}
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		__expr_01 = new LogicExp(scanner);
 
 		String token = scanner.getToken();
@@ -88,10 +97,13 @@ public class ComplexExp extends BaseExp {
 				ComplexExp expr = new ComplexExp(scanner);
 				System.out.println("SimpleExp: " + expr.toString());
 
+				expr.print(1);
+				System.out.println();
+
 				token = scanner.getToken();
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

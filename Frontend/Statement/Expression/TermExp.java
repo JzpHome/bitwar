@@ -1,16 +1,14 @@
 package Frontend.Statement.Expression;
 
-// 前端
+import Error.BaseError;
 import Frontend.TokenScanner;
-// 错误异常
-import MyExecption.*;
 
 public class TermExp extends BaseExp {
 	private FactorExp __expr_01;
 	private String	  __option;
 	private FactorExp __expr_02;
 
-	public TermExp(TokenScanner scanner) throws FrontendExecption {
+	public TermExp(TokenScanner scanner) throws BaseError {
 		__expr_01	= null;
 		__option	= null;
 		__expr_02	= null;
@@ -20,8 +18,13 @@ public class TermExp extends BaseExp {
 
 	public TermExp(TermExp expr) {
 		__expr_01 = new FactorExp(expr.__expr_01);
-		__option  = new String(__option);
-		__expr_02 = new FactorExp(expr.__expr_02);
+		if(expr.__expr_02 != null) {
+			__option  = new String(expr.__option);
+			__expr_02 = new FactorExp(expr.__expr_02);
+		} else {
+			__option = null;
+			__expr_02 = null;
+		}
 	}
 
 	public FactorExp Expr01() {
@@ -56,7 +59,18 @@ public class TermExp extends BaseExp {
 		}
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		__expr_01.print(deep);
+
+		if(__option != null) {
+			super.print(deep);
+			System.out.println(__option);
+
+			__expr_02.print(deep);
+		}
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		__expr_01 = new FactorExp(scanner);
 
 		String token = scanner.getToken();
@@ -82,10 +96,13 @@ public class TermExp extends BaseExp {
 				TermExp expr = new TermExp(scanner);
 				System.out.println("TermExp: " + expr.toString());
 
+				expr.print(1);
+				System.out.println();
+
 				token = scanner.getToken();
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

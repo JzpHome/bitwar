@@ -1,16 +1,13 @@
 package Frontend.Statement;
 
-// 语法分析
+import Error.BaseError;
 import Frontend.TokenScanner;
-import Frontend.Statement.Expression.*;
-// 错误异常处理
-import MyExecption.*;
 
 public class StmtSequence extends BaseStmt {
 	private SingleStmt	 __stmt;
 	private StmtSequence __stmts;
 
-	public StmtSequence(TokenScanner scanner) throws FrontendExecption {
+	public StmtSequence(TokenScanner scanner) throws BaseError {
 		__stmt	= null;
 		__stmts = null;
 
@@ -19,7 +16,11 @@ public class StmtSequence extends BaseStmt {
 
 	public StmtSequence(StmtSequence stmts) {
 		__stmt = new SingleStmt(stmts.__stmt);
-		__stmts = new StmtSequence(stmts.__stmts);
+		if(stmts.__stmts != null) {
+			__stmts = new StmtSequence(stmts.__stmts);
+		} else {
+			__stmts = null;
+		}
 	}
 
 	public SingleStmt Stmt() {
@@ -27,7 +28,11 @@ public class StmtSequence extends BaseStmt {
 	}
 
 	public StmtSequence Stmts() {
-		return (new StmtSequence(__stmts));
+		if(__stmts != null) {
+			return (new StmtSequence(__stmts));
+		} else {
+			return null;
+		}
 	}
 
 	public String toString() {
@@ -42,7 +47,18 @@ public class StmtSequence extends BaseStmt {
 		return result;
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		__stmt.print(deep);
+
+		if(__stmts != null) {
+			super.print(deep);
+			System.out.println(";");
+
+			__stmts.print(deep);
+		}
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		__stmt = new SingleStmt(scanner);
 
 		String token = scanner.getToken();
@@ -62,10 +78,11 @@ public class StmtSequence extends BaseStmt {
 				token = scanner.getToken();
 
 				System.out.println(stmt.toString());
+				stmt.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

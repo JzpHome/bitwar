@@ -1,0 +1,11 @@
+Stategy T5:
+	i := 1;
+	k := 1;
+	while k < CUR and i = 1 do
+		if B[k] = 0 then
+			i := 0
+		end;
+		k := k + 1
+	end;
+	return i
+end

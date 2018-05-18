@@ -1,16 +1,15 @@
 package Frontend.Statement;
 
-// 前端
+import Error.BaseError;
+import Error.Frontend.*;
 import Frontend.TokenScanner;
 import Frontend.Statement.Expression.*;
-// 错误异常
-import MyExecption.*;
 
-public class Stategy {
+public class Stategy extends BaseStmt {
 	private String		 __name;
 	private StmtSequence __stmts;
 
-	public Stategy(TokenScanner scanner) throws FrontendExecption {
+	public Stategy(TokenScanner scanner) throws BaseError {
 		__name	= null;
 		__stmts = null;
 
@@ -25,7 +24,6 @@ public class Stategy {
 		String result = "Stategy ";
 
 		result += __name + ": ";
-
 		result += __stmts.toString();
 
 		result += " end";
@@ -33,7 +31,17 @@ public class Stategy {
 		return result;
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		super.print(deep);
+		System.out.println("Stategy " + __name + ": ");
+
+		__stmts.print(deep+1);
+
+		super.print(deep);
+		System.out.println("end");
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		String token = scanner.getToken();
 		if(token.equals("Stategy")) {
 			scanner.match("Stategy");
@@ -50,13 +58,16 @@ public class Stategy {
 				if(token.equals("end")) {
 					scanner.match("end");
 				} else {
-					throw (new FrontendExecption("Stategy: " + token + " is not 'end'"));
+					throw (new StmtError("Stategy", scanner.fpath(), scanner.lineno(), 
+								scanner.linepos(), "'" + token + "' is not 'end'"));
 				}
 			} else {
-				throw (new FrontendExecption("Stategy: " + token + " is not ':'"));
+				throw (new StmtError("Stategy", scanner.fpath(), scanner.lineno(), 
+							scanner.linepos(), "'" + token + "' is not ':'"));
 			}
 		} else {
-			throw (new FrontendExecption("Stategy: " + token + " is not 'Stategy'"));
+			throw (new StmtError("Stategy", scanner.fpath(), scanner.lineno(), 
+						scanner.linepos(), "'" + token + "' is not 'Stategy'"));
 		}
 	}
 
@@ -70,10 +81,11 @@ public class Stategy {
 				token = scanner.getToken();
 
 				System.out.println(stategy.toString());
+				stategy.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

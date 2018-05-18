@@ -1,0 +1,7 @@
+Stategy T3:
+	if CUR = 1 then
+		return 1
+	else 
+		return B[CUR-1]
+	end
+end

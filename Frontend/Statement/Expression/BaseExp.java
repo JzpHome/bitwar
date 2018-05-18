@@ -1,12 +1,13 @@
 package Frontend.Statement.Expression;
 
-// 前端
-import Frontend.TokenScanner;
-// 错误异常
-import MyExecption.*;
-
 public class BaseExp {
 	public String toString() {
 		return (new String("null"));
+	}
+
+	public void print(int deep) {
+		for(int i = 0; i < deep; ++i) {
+			System.out.print("    ");
+		}
 	}
 }

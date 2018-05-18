@@ -1,15 +1,14 @@
 package Frontend.Statement;
 
-// 前端
+import Error.BaseError;
+import Error.Frontend.*;
 import Frontend.TokenScanner;
-import Frontend.Statement.Expression.*;
-// 错误异常
-import MyExecption.*;
+import Frontend.Statement.Expression.ComplexExp;
 
 public class ReturnStmt extends BaseStmt {
 	private ComplexExp __expr;
 
-	public ReturnStmt(TokenScanner scanner) throws FrontendExecption {
+	public ReturnStmt(TokenScanner scanner) throws BaseError {
 		__expr = null;
 
 		scan(scanner);
@@ -25,20 +24,27 @@ public class ReturnStmt extends BaseStmt {
 
 	public String toString() {
 		String result = "return ";
-		
 		result += __expr.toString();
 
 		return result;
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		super.print(deep);
+		System.out.println("return");
+
+		__expr.print(deep+1);
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		String token = scanner.getToken();
 		if(token.equals("return")) {
 			scanner.match("return");
 
 			__expr = new ComplexExp(scanner);
 		} else {
-			throw (new FrontendExecption("ReturnStmt: " + token + " is not 'return'"));
+			throw (new StmtError("ReturnStmt", scanner.fpath(), scanner.lineno(), 
+						scanner.linepos(), "'" + token + "' is not 'return'"));
 		}
 	}
 
@@ -52,10 +58,11 @@ public class ReturnStmt extends BaseStmt {
 				token = scanner.getToken();
 
 				System.out.println(stmt.toString());
+				stmt.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }

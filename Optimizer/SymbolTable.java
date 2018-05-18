@@ -1,64 +1,73 @@
-package Opitimizer;
+package Optimizer;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 public class SymbolTable {
-	private static SymbolTable	_symbol = null;
-    private Map<String, Object> __symbol;
+	// 基本属性
+	private Integer					__DS, __count;
+	private Map<String, Integer>	__address;
 
-	public static SymbolTable symbol() {
-		if(_symbol == null) {
-			_symbol = new SymbolTable();
-		}
-		return _symbol;
+	public SymbolTable() {
+		__DS = 0;
+		__count = 0;
+		__address = new HashMap<String, Integer>();
 	}
 
+	// Variable
     public boolean hasValue(String id) {
-		return __symbol.containsKey(id);
+		return __address.containsKey(id);
     }
-
-    public Object getValue(String id) {
-		return __symbol.get(id);
-    }
-
-    public Object addValue(String id, Object value) {
+    public Integer addValue(String id) {
 		if(hasValue(id)) {
 			return null;
 		} else {
-			return __symbol.put(id, value);
+			Integer addr = __count;
+			__address.put(id, __count++);
+			return (new Integer(addr));
 		}
 	}
-
-    public Object setValue(String id, Object value) {
-		if(hasValue(id)){
-			return __symbol.put(id, value);
+    public Integer addValue(String id, int len) {
+		if(hasValue(id)) {
+			return null;
+		} else {
+			Integer arr_head = __count;
+			__address.put(id, __count);
+			for(int i = 0; i < len; ++i) {
+				__address.put(id + "[" + i + "]", new Integer(__count++));
+			}
+			return arr_head;
+		}
+	}
+	public Integer getValue(String var) {
+		if(hasValue(var)) {
+			return __address.get(var);
 		} else {
 			return null;
 		}
-    }
-
-    public Object delValue(String id) {
-		return __symbol.remove(id);
-    }
-
-	public void print() {
-		for(Map.Entry<String, Object> entry: __symbol.entrySet()) {
-			System.out.println(entry.getKey() + ": " + entry.getValue());
-		}
 	}
 
-	private SymbolTable() {
-		__symbol = new HashMap<String, Object>();
+	// Others
+	public void setDS(int DS) {
+		__DS = DS;
+	}
+	public Integer DS() {
+		return __DS;
+	}
+	public Integer size() {
+		return __count;
+	}
+	public void print() {
+		for(Map.Entry<String, Integer> entry: __address.entrySet()) {
+			System.out.printf("%5s: %d\n", entry.getKey(), entry.getValue());
+		}
 	}
 
 	public static void main(String[] args) {
-		SymbolTable symbol = SymbolTable.symbol();
-		symbol.addValue("CUR", 1);
-		for(int i = 0; i < 10; ++i) {
-			symbol.addValue("A[" + i + "]", i);
-			symbol.addValue("B[" + i + "]", i);
-		}
+		SymbolTable symbol = new SymbolTable();
+		symbol.addValue("CUR");
+		symbol.addValue("A", 10);
+		symbol.addValue("B", 10);
+
 		symbol.print();
 	}
 }

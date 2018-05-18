@@ -1,8 +1,7 @@
 package Frontend;
 
 import java.io.*;
-
-import MyExecption.FrontendExecption;
+import Error.Frontend.ScannerError;
 
 @SuppressWarnings("all")
 public class TokenScanner {
@@ -52,13 +51,25 @@ public class TokenScanner {
 		MATCH_FLAG	= true;
 	}
 
-    public String getToken() throws FrontendExecption {
+	public String fpath() {
+		return (new String(__fpath));
+	}
+
+	public int lineno() {
+		return __lineno;
+	}
+
+	public int linepos() {
+		return __linepos;
+	}
+
+    public String getToken() throws ScannerError {
 		int code  = -1;
 		int	state = FLAG_START;
 
 		// 利用DFA识别token
 		if(MATCH_FLAG == true) {
-			tokens = "";
+			tokens = null;
 			while(state != FLAG_DONE) {
 				code = getNextChar();
 				switch(state) {
@@ -81,7 +92,7 @@ public class TokenScanner {
 						ERROR();
 						break;
 					default:
-						throw (new FrontendExecption(state + "is not a state"));
+						throw (new ScannerError(state + "is not a state"));
 				}
 			}
 			MATCH_FLAG = false;
@@ -141,7 +152,7 @@ public class TokenScanner {
 		} else if(code == FILE_EOF) {
 			return FLAG_DONE;
 		} else {
-			tokens += (char)code;
+			tokens = "" + (char)code;
 			if(Character.isDigit(code)) {
 				return FLAG_INNUM;
 			} else if(Character.isLetter(code)) {
@@ -198,16 +209,16 @@ public class TokenScanner {
 	}
 
 	private String DONE() {
-		if(tokens == null || tokens.equals("")) {
+		if(tokens == null) {
 			return "";
 		} else {
-			return tokens;
+			return (new String(tokens));
 		}
 	}
 
-	private void ERROR() throws FrontendExecption {
+	private void ERROR() throws ScannerError {
 		ungetNextChar();
-		throw (new FrontendExecption(__fpath, __lineno, __linepos, "syntax error"));
+		throw (new ScannerError(__fpath, __lineno, __linepos, "syntax error"));
 	}
 
     public static void main(String args[]) {
@@ -216,7 +227,7 @@ public class TokenScanner {
 
 			String token = scanner.getToken();
 			while(!token.equals("")) {
-				System.out.println("token: " + token);
+				System.out.println("Token: " + token);
 				scanner.match(token);
 				token = scanner.getToken();
 			}

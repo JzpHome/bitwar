@@ -1,16 +1,13 @@
 package Frontend.Statement;
 
-// 语法分析
+import Error.BaseError;
 import Frontend.TokenScanner;
-import Frontend.Statement.Expression.*;
-// 错误异常处理
-import MyExecption.*;
 
 public class SingleStmt extends BaseStmt {
 	private String	 __type;
 	private BaseStmt __stmt;
 
-	public SingleStmt(TokenScanner scanner) throws FrontendExecption {
+	public SingleStmt(TokenScanner scanner) throws BaseError {
 		__type = null;
 		__stmt = null;
 
@@ -25,8 +22,6 @@ public class SingleStmt extends BaseStmt {
 			__stmt = new WhileStmt((WhileStmt)(stmt.__stmt));
 		} else if(__type.equals("ReturnStmt")) {
 			__stmt = new ReturnStmt((ReturnStmt)(stmt.__stmt));
-		} else if(__type.equals("RandomStmt")) {
-			__stmt = new RandomStmt((RandomStmt)(stmt.__stmt));
 		} else {
 			__stmt = new AssignStmt((AssignStmt)(stmt.__stmt));
 		}
@@ -43,8 +38,6 @@ public class SingleStmt extends BaseStmt {
 			return (new WhileStmt((WhileStmt)__stmt));
 		} else if(__type.equals("ReturnStmt")) {
 			return (new ReturnStmt((ReturnStmt)__stmt));
-		} else if(__type.equals("RandomStmt")) {
-			return (new RandomStmt((RandomStmt)__stmt));
 		} else {
 			return (new AssignStmt((AssignStmt)__stmt));
 		}
@@ -57,14 +50,16 @@ public class SingleStmt extends BaseStmt {
 			return ((WhileStmt)__stmt).toString();
 		} else if(__type.equals("ReturnStmt")) {
 			return ((ReturnStmt)__stmt).toString();
-		} else if(__type.equals("RandomStmt")) {
-			return ((RandomStmt)__stmt).toString();
 		} else {
 			return ((AssignStmt)__stmt).toString();
 		}
 	}
 
-	public void scan(TokenScanner scanner) throws FrontendExecption {
+	public void print(int deep) {
+		__stmt.print(deep);
+	}
+
+	public void scan(TokenScanner scanner) throws BaseError {
 		String token = scanner.getToken();
 		if(token.equals("if")) {
 			__type = new String("IfStmt");
@@ -75,9 +70,6 @@ public class SingleStmt extends BaseStmt {
 		} else if(token.equals("return")) {
 			__type = new String("ReturnStmt");
 			__stmt = new ReturnStmt(scanner);
-		} else if(token.equals("RANDOM")) {
-			__type = new String("RandomStmt");
-			__stmt = new RandomStmt(scanner);
 		} else {
 			__type = new String("AssignStmt");
 			__stmt = new AssignStmt(scanner);
@@ -94,10 +86,11 @@ public class SingleStmt extends BaseStmt {
 				token = scanner.getToken();
 
 				System.out.println(stmt.toString());
+				stmt.print(0);
 				System.out.println("------------------------------------");
 			}
-		} catch (FrontendExecption re) {
-			System.err.println(re.getMessage());
+		} catch (BaseError e) {
+			System.err.println(e.getMessage());
 		}
 	}
 }
